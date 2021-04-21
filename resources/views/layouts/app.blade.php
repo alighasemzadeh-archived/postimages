@@ -19,25 +19,15 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
-        <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
-
-            <!-- Page Content -->
-            <main>
+        <!-- This example requires Tailwind CSS v2.0+ -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
+            <div class="max-w-3xl mx-auto">
                 {{ $slot }}
-            </main>
+            </div>
         </div>
+
 
         @stack('modals')
 
